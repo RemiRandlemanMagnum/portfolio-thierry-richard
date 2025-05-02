@@ -58,19 +58,19 @@ img {
     font-display: swap;
 }
 @font-face {
-    font-family: 'Zuume';
+    font-family: 'zuume';
     src: url('../fonts/Zuume-Italic.woff2') format('woff2');
     font-style: italic;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Zuume';
+    font-family: 'zuume';
     src: url('../fonts/Zuume-Bold.woff2') format('woff2');
     font-weight: bold;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Zuume';
+    font-family: 'zuume';
     src: url('../fonts/Zuume-Black.woff2') format('woff2');
     font-weight: 900;
     font-display: swap;
