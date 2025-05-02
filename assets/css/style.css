@@ -7,6 +7,45 @@ body {
     line-height: 1.6;
     font-family: "Outfit";
 }
+/* === Loader plein écran === */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: var(--couleur-principale); /* fond noir ou autre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+  /* Texte géant avec effet de tracé */
+.loader-text {
+    font-family: var(--police-principale);
+    font-size: clamp(4rem, 15vw, 20rem);
+    font-weight: 900;
+    letter-spacing: 5%;
+    color: transparent;
+    background: linear-gradient(to right, white 100%, white 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: drawText 2s ease forwards;
+}
+  /* Animation du tracé */
+@keyframes drawText {
+    to {
+      background-size: 100% 100%;
+    }
+}
+
+  /* Quand on cache le loader */
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 img { 
     max-width: 100%;
     height: auto; 
@@ -66,6 +105,7 @@ img {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0.75;
 }
 .hero-text {
     position: absolute;
@@ -83,7 +123,7 @@ img {
     font-family: var(--police-principale);
     font-weight: 800;
     letter-spacing: 5%;
-    font-size: 65px;
+    font-size:4.75rem;
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
@@ -150,6 +190,9 @@ img {
     left: 1.5rem;
     z-index: 1002;
 }
+#site-logo {
+    mix-blend-mode: difference; 
+}
 .menu-logo img {
     height: 40px;
     display: block;
@@ -205,6 +248,27 @@ img {
     width: 32px;
     height: 32px;
 }
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+}
+.lang-btn {
+    background: none;
+    border: none;   
+    color: var(--couleur-texte);
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-family: var(--police-principale);
+    font-size: 1.375rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.lang-btn:hover,
+.lang-btn:focus {
+    text-decoration: underline;
+}
+.lang-btn.active {
+    text-decoration: underline;
+}
 .lang-switch,
 .access-btn {
     background: none;
@@ -216,7 +280,7 @@ img {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-.lang-switch:hover, .access-btn:hover{
+.access-btn:hover{
     text-decoration: underline;
 }
 .menu-socials {
@@ -276,9 +340,27 @@ section .btn-cta {
     border: 2px solid var(--couleur-texte);
     border-radius: 25px;
     cursor: pointer; 
+    transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border 0.4s ease,
+    transform 0.2s ease;
+}
+section .btn-cta:hover{
+    color: var(--couleur-principale);
+    background-color: var(--couleur-texte);
+    border: 2px solid var(--couleur-principale);
+    transform: scale(1.03);
+
 }
 .content-text{
     padding:1rem;
+}
+#avenir{
+    margin-top:-5%;
+}
+#avenir .content-img{
+    margin-top: 10%;
 }
 #travaux .content-img{
     margin-top: 2rem;
@@ -288,8 +370,8 @@ section .btn-cta {
     flex-direction: column-reverse;
 }
 #prestations img{
-    width:100%;
-    margin-top: 15%;
+    width:520px;
+    margin-top: 0%;
 }
 #contact {
     position: relative;
@@ -300,22 +382,41 @@ section .btn-cta {
     overflow: hidden;
     text-align: center;
     width:100vw;
+    margin-top:-30%;
 }
-#contact .signature-geante {
+.signature-geante {
+    font-family: var(--police-principale);
+    font-size: clamp(4rem, 20vw, 12rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-family: var(--police-principale);
-    font-size: 20vw;
-    font-weight: 900;
-    color: var(--couleur-texte);
-    opacity: 0.5;
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
-    line-height: 0.6;
-}
+    color: transparent;
+    -webkit-text-stroke: 1px var(--couleur-texte);
+    text-stroke: 1px var(--couleur-texte);
+    background: linear-gradient(to right, var(--couleur-texte) 100%, var(--couleur-texte) 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-size 2s ease;
+  }
+  @keyframes fillOutlineSolid {
+    to {
+    background-size: 100% 100%;
+    }
+  }
+  .signature-geante.loaded {
+    background-size: 100% 100%;
+    transition: background-size 2s ease;
+  }
 /* === MAIN CONTAINER (vertical scroll mobile) === */
 .container {
 display: flex;
@@ -484,10 +585,14 @@ section {
         font-size: 2rem;
         letter-spacing: 40%;
     }
+    #avenir .content-img{
+    margin-top: 0;
+    }
     #travaux {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-left: -5rem;
     }
     #travaux .content-text-left,
     #travaux .content-img {
@@ -504,6 +609,8 @@ section {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        margin-top: 0;
+        margin-left: 1rem;
     }
     #avenir .content-img{
         display: none;
@@ -537,11 +644,21 @@ section {
     #prestations{
         flex-direction: row;
         align-items: center;
+        margin-left: 1rem;
     }
     #prestations .content-img {
         margin-right: 3rem;
     }
+    #contact{
+        margin-top: 0;
+        margin-left:15rem;
+    }
     #contact .content-text{
         max-width:32rem;
+    }
+    .signature-geante {
+        font-size: 15rem;
+        letter-spacing: 7%;
+        bottom: -7%;
     }
 }
