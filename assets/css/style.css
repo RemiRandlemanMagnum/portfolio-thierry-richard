@@ -207,11 +207,17 @@ img {
 }
 .lang-switch,
 .access-btn {
-background: none;
-border: 1px solid var(--couleur-texte);
-color: var(--couleur-texte);
-padding: 0.5rem 1rem;
-cursor: pointer;
+    background: none;
+    font-family: var(--police-principale);
+    font-size: 1.375rem;
+    font-weight: 400;
+    border: none;
+    color: var(--couleur-texte);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.lang-switch:hover, .access-btn:hover{
+    text-decoration: underline;
 }
 .menu-socials {
     position: absolute;
@@ -320,6 +326,7 @@ flex-direction: column;
 body {
     overflow-x: auto;
     overflow-y: hidden;
+    height:100vh;
 }
 .logo-container {
     position: relative;
@@ -342,6 +349,7 @@ body {
 .container {
     flex-direction: row;
     height: 100vh;
+    overflow: hidden;
     width: max-content;
     overflow-x: auto; /* Permet le défilement horizontal */
     scroll-snap-type: x mandatory;
@@ -396,7 +404,7 @@ section {
 }
 
 .menu-image img {
-    width: 517px;
+    width: 480px;
     height: auto;
     object-fit: cover;
 }
@@ -418,11 +426,11 @@ section {
 }
 .nav-links li a {
     font-size: 6rem;
-    line-height: 96px;
+    line-height: 92px;
     letter-spacing: 10%;
 }
 .menu-extras {
-    margin-top: 2rem;
+    margin-top: 0.8rem;
     flex-direction: row;
     gap: 2rem;
 }
