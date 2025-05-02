@@ -359,6 +359,11 @@ section .btn-cta:hover{
 #avenir .content-img{
     margin-top: 10%;
 }
+#avenir .content-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 #travaux .content-img{
     margin-top: 2rem;
 }
