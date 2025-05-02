@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
+    <meta http-equiv="X-Content-type-options" content="nosniff">
+    <meta http-equiv="Referrer-policy" content="no-referrer-when-downgrade">
+    <!-- HTML Meta Tags -->
+    <title>Thierry Richard | Photographe Brestois</title>
+    <meta name="title" content="Thierry Richard | Photographe Brestois">
+    <meta name="description" content="Portfolio dédié aux réalisations de Thierry Richard. Photographe Brestois depuis ...">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="./">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thierry Richard | Photographe Brestois">
+    <meta property="og:description" content="Portfolio dédié aux réalisations de Thierry Richard. Photographe Brestois depuis ...">
+    <meta property="og:image" content="./img/og-img.webp">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon/favicon.svg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="logo-container">
+    <a href="#accueil" aria-label="Retour à l’accueil">
+      <img src="assets/img/svg/logo.svg" alt="Logo Thierry Richard">
+      <span>Thierry Richard</span>
+    </a>
+  </div>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+    <img src="assets/img/svg/menu.svg" alt="" aria-hidden="true"/>
+  </button>
+
+  <nav id="menu" class="menu-overlay" aria-hidden="true">
+    <div class="logo-container">
+      <a href="#accueil" aria-label="Retour à l’accueil">
+        <img src="assets/img/svg/logo.svg" alt="Logo Thierry Richard">
+        <span>Thierry Richard</span>
+      </a>
+    </div>
+    <div class="menu-image">
+      <img src="assets/img/webp/menu.webp" alt="Un homme qui saute d'un promontoir" loading="lazy" />
+    </div>
+  
+    <div class="menu-content">
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#travaux">Travaux</a></li>
+        <li><a href="#avenir">À venir</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+  
+      <div class="menu-extras">
+        <button class="lang-switch">FR | EN</button>
+        <button class="access-btn">Accessibilité</button>
+      </div>
+    </div>
+  
+    <button class="menu-close" aria-label="Fermer le menu">
+      <img src="assets/img/svg/cross.svg" alt="" aria-hidden="true" />
+    </button>
+    <div class="menu-socials">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="assets/img/svg/instagram.svg" alt="" aria-hidden="true">
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="assets/img/svg/facebook.svg" alt="" aria-hidden="true">
+      </a>
+    </div>
+  </nav>
+</header>
+
+    <main class="container">
+      <!-- Accueil -->
+      <section id="accueil" aria-labelledby="titre-principal">
+        <div class="hero-container">
+          <img 
+            src="assets/img/hero-1200.webp"
+            srcset="
+              assets/img/webp/hero-600.webp 600w,
+              assets/img/webp/hero-900.webp 900w,
+            "
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 80vw, 50vw"
+            alt="Photo d'un homme devant la foule, pendant une manifestation"
+            loading="eager"
+          />
+          <div class="hero-text">
+            <h1 id="titre-principal">THIERRY RICHARD</h1>
+            <p>PHOTOGRAPHE BRESTOIS</p>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Travaux -->
+      <section id="travaux" aria-labelledby="titre-travaux">
+        <div class="content-text">
+          <h2 class="titre-center">Travaux</h2>
+          <h3>Projets et albums</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.</p>
+          <a href="/travaux" class="btn-cta">En savoir plus</a>
+        </div>
+        <div class="content-img">
+          <img 
+          src="assets/img/webp/travaux-1200.webp" 
+          srcset="
+          assets/img/webp/travaux-600.webp 600w,
+          assets/img/webp/travaux-900.webp 900w,
+          "
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+          alt="Borne d'incendie ouverte, dans la rue de Siam à Brest" 
+          loading="lazy" 
+          />
+        </div>
+        
+      </section>
+  
+      <!-- À venir -->
+      <section id="avenir" aria-labelledby="titre-avenir">
+        <div class="image-split horizontal top"></div>
+        <div class="content-text">
+          <h2 class="titre-center">À venir</h2>
+          <h3>Quoi de neuf ici ?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.</p>
+          <a href="/avenir" class="btn-cta">Plus d’infos</a>
+        </div>
+        <div class="image-split horizontal bottom"></div>
+        <div class="content-img">
+          <img 
+          src="assets/img/webp/avenir-1200.webp" 
+          srcset="
+            assets/img/webp/avenir-600.webp 600w,
+            assets/img/webp/avenir-900.webp 900w,
+            assets/img/webp/avenir-1200.webp 1200w
+          "
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+          alt="Foule soulevant un homme durant une manifestation" 
+          loading="lazy" 
+          />
+        </div>
+      </section>
+  
+      <!-- Prestations -->
+      <section id="prestations" aria-labelledby="titre-prestations">
+        <div class="content-img">
+          <img 
+          src="assets/img/webp/prestations-1200.webp" 
+          srcset="
+            assets/img/webp/prestations-600.webp 600w,
+            assets/img/webp/prestations-900.webp 900w,
+            assets/img/webp/prestations-1200.webp 1200w
+          "
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+          alt="Shooting en extérieur, main tenant une feuille" 
+          loading="lazy" 
+          />
+        </div>
+        <div class="content-text">
+          <h2 class="titre-left">Prestations</h2>
+          <h3>Shooting - mariage</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.</p>
+          <a href="/prestations" class="btn-cta">Plus d’infos</a>
+        </div>
+      </section>
+  
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="titre-contact">
+        <div class="content-text">
+          <h2 class="titre-center">Contact</h2>
+          <h3>Vous avez un projet ?</h3>
+          <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.</p></p>
+          <a href="/contact" class="btn-cta">Contactez-moi</a>
+        </div>
+        <div class="signature-geante" aria-hidden="true">THIERRY RICHARD</div>
+      </section>
+    </main>
+    <script src="./assets/js/menu.js"></script>
+</body>
+</html>
