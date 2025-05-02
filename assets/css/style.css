@@ -53,27 +53,27 @@ img {
 }
 @font-face {
     font-family: 'Outfit';
-    src: url('/assets/fonts/Outfit-Variable.woff2') format('woff2');
+    src: url('../fonts/Outfit-Variable.woff2') format('woff2');
     font-weight: 100 900; /* pour activer la plage variable */
     font-display: swap;
 }
 @font-face {
     font-family: 'Zuume';
-    src: url('/assets/fonts/Zuume-Italic.woff2') format('woff2');
+    src: url('../fonts/Zuume-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Zuume';
-    src: url('/assets/fonts/Zuume-Bold.woff2') format('woff2');
+    src: url('../fonts/Zuume-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Zuume';
-    src: url('/assets/fonts/Zuume-Black.woff2') format('woff2');
+    src: url('../fonts/Zuume-Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
