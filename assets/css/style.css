@@ -120,7 +120,7 @@ img {
     font-family: var(--police-principale);
     font-weight: 800;
     letter-spacing: 5%;
-    font-size:4.75rem;
+    font-size: clamp(68px, 10vw, 120px);
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
@@ -129,7 +129,7 @@ img {
 .hero-text p {
     font-family: var(--police-principale);
     font-weight: 200;
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 50%;
     font-style: italic;
     margin-top: 0;
@@ -309,7 +309,7 @@ section h2 {
     font-family: var(--police-principale);
     font-size: 60px;
     font-weight: 800;
-    letter-spacing: 5%;
+    letter-spacing: 4%;
 }
 section h3 {
     font-family: var(--police-principale);
@@ -348,16 +348,44 @@ section .btn-cta:hover{
     background-color: var(--couleur-texte);
     border: 2px solid var(--couleur-principale);
     transform: scale(1.03);
-
+}
+.scroll-indicator {
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: var(--police-principale);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    animation: float 2s ease-in-out infinite;
+    opacity: 0.7;
+}
+.scroll-indicator img {
+    width: 24px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+@keyframes float {
+    0%   { transform: translateX(-50%) translateY(0); }
+    50%  { transform: translateX(-50%) translateY(10px); }
+    100% { transform: translateX(-50%) translateY(0); }
 }
 .content-text{
     padding:1rem;
 }
 #avenir{
-    margin-top:-5%;
+    margin-top:-150px;
 }
 #avenir .content-img{
     margin-top: 10%;
+    width: 100%;
+    padding: 0;
+    margin-top: 50px;
 }
 #avenir .content-img img{
     width: 100%;
@@ -365,15 +393,16 @@ section .btn-cta:hover{
     display: block;
 }
 #travaux .content-img{
-    margin-top: 2rem;
+    margin-top: 50px;
 }
 #prestations {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: -130px;
 }
 #prestations img{
     width:520px;
-    margin-top: 0%;
+    margin-top: 50px;
 }
 #contact {
     position: relative;
