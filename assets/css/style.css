@@ -740,12 +740,17 @@ section {
         pointer-events: none;
         opacity: 0.9;
     }
+    
     .image-split.top {
         bottom: 0;
+        top: 0;
+        left: 0;
         background-position: top center;
     }
     .image-split.bottom {
         top: 0;
+        bottom: 0;
+        right: 0;
         background-position: bottom center;
     }
     #prestations{
