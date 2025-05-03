@@ -732,22 +732,21 @@ section {
         position: absolute;
         width: 50vw;
         height: 20vh;
-        background-image: url('./assets/img/webp/avenir-1200.webp');
+        background-image: url(../img/webp/avenir-1200.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        z-index: 0;
+        z-index: -1;
         pointer-events: none;
-        opacity: 0.9;
+        opacity: 1;
     }
-    
     .image-split.top {
-        bottom: 0;
-        background-position: top center;
+    top: 0;
+    background-position: top center;
     }
     .image-split.bottom {
-        top: 0;
-        background-position: bottom center;
+    bottom: 0;
+    background-position: bottom center;
     }
     #prestations{
         flex-direction: row;
@@ -773,8 +772,7 @@ section {
 body.accessibility {
     background-color: #ffffff;
     color: #000000;
-  }
-  
+}
   /* Textes */
   body.accessibility h1,
   body.accessibility h2,
