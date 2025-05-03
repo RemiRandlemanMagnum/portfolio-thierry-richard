@@ -43,3 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(contactSection);
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("btn-access");
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+});
