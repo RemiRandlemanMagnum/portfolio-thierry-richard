@@ -188,7 +188,8 @@ img {
     z-index: 1002;
 }
 #site-logo {
-    mix-blend-mode: difference; 
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 .menu-logo img {
     height: 40px;
@@ -731,7 +732,7 @@ section {
         position: absolute;
         width: 50vw;
         height: 20vh;
-        background-image: url('/assets/img/webp/avenir-1200.webp');
+        background-image: url('./assets/img/webp/avenir-1200.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -768,3 +769,56 @@ section {
         bottom: -7%;
     }
 }
+body.accessibility {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Textes */
+  body.accessibility h1,
+  body.accessibility h2,
+  body.accessibility p,
+  body.accessibility a {
+    color: #000000 !important;
+  }
+  
+  /* Boutons */
+  body.accessibility .btn-cta {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+  }
+  
+  /* Menu burger + overlay */
+  body.accessibility .menu-toggle,
+  body.accessibility .menu-overlay,
+  body.accessibility .lang-btn,
+  body.accessibility .access-btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  
+  /* Navigation */
+  body.accessibility .nav-links a {
+    color: #000000 !important;
+  }
+  
+  /* Signature géante */
+  body.accessibility .signature-geante {
+    -webkit-text-stroke: 1px #000000;
+    background: linear-gradient(to right, #000000 100%, #000000 100%);
+    background-size: 100% 100%;
+    color: transparent;
+  }
+  
+  /* SVG */
+  body.accessibility svg path,
+  body.accessibility svg circle,
+  body.accessibility svg rect {
+    fill: #000000 !important;
+    stroke: #000000 !important;
+  }
+  body.accessibility .logo {
+    color: #000000;
+  }

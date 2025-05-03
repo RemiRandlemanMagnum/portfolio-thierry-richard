@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btn-access");
+  const toggleBtn = document.getElementById("theme-toggle");
 
-  btn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("accessibility");
   });
 });
