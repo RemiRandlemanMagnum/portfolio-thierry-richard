@@ -732,7 +732,7 @@ section {
         position: absolute;
         width: 50vw;
         height: 20vh;
-        background-image: url('./assets/img/webp/avenir-1200.webp');
+        background-image: url('../assets/img/webp/avenir-1200.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -743,14 +743,10 @@ section {
     
     .image-split.top {
         bottom: 0;
-        top: 0;
-        left: 0;
         background-position: top center;
     }
     .image-split.bottom {
         top: 0;
-        bottom: 0;
-        right: 0;
         background-position: bottom center;
     }
     #prestations{
