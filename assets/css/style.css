@@ -120,7 +120,7 @@ img {
     font-family: var(--police-principale);
     font-weight: 800;
     letter-spacing: 5%;
-    font-size: clamp(68px, 10vw, 120px);
+    font-size: clamp(65px, 10vw, 120px);
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
@@ -302,6 +302,7 @@ img {
     opacity: 0.6;
     outline: none;
 }
+
 section{
     height: 100vh;
 }
@@ -379,8 +380,8 @@ section .btn-cta:hover{
 .content-text{
     padding:1rem;
 }
-#avenir{
-    margin-top:-150px;
+#travaux .content-img{
+    margin-top: 60px;
 }
 #avenir .content-img{
     margin-top: 10%;
@@ -388,18 +389,14 @@ section .btn-cta:hover{
     padding: 0;
     margin-top: 50px;
 }
+#prestations {
+    display: flex;
+    flex-direction: column-reverse;
+}
 #avenir .content-img img{
     width: 100%;
     height: auto;
     display: block;
-}
-#travaux .content-img{
-    margin-top: 50px;
-}
-#prestations {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: -130px;
 }
 #prestations img{
     width:520px;
@@ -414,7 +411,6 @@ section .btn-cta:hover{
     overflow: hidden;
     text-align: center;
     width:100vw;
-    margin-top:-30%;
 }
 .signature-geante {
     font-family: var(--police-principale);
@@ -439,6 +435,7 @@ section .btn-cta:hover{
     -webkit-background-clip: text;
     background-clip: text;
     transition: background-size 2s ease;
+    margin-top: 150px;
   }
   @keyframes fillOutlineSolid {
     to {
@@ -454,6 +451,55 @@ section .btn-cta:hover{
 display: flex;
 flex-direction: column;
 }
+/* === MINI MOBILE === */
+@media screen and (max-width: 360px) {
+    body {
+    font-size: 14px;
+    }
+    section h3{
+    letter-spacing: 15%;
+    }
+    .scroll-indicator{
+    bottom: -81px;
+    }
+    .btn-cta {
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 0.05em;
+    }
+    .nav-links a{
+        font-size: 2rem;
+        line-height: 20px;
+    }
+    .menu-extras{
+        flex-direction: row;
+        margin-top : 0;
+    }
+    #travaux{
+    margin-top: 1rem;
+    }
+    #avenir{
+    margin-top : 8.15rem;
+    }
+    #prestations{
+        margin-top: 22rem;
+    }
+    .signature-geante {
+    margin-top: 50px;
+    bottom:-15px;
+    }
+    section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+    }
+    #contact{
+    margin-top: 0px;
+    }
+  }
 /* === DESKTOP === */
 @media screen and (min-width: 1024px) {
 body {
@@ -492,8 +538,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 80vw; /* Chaque section prend la largeur de la vue */
-    height: 100vh; /* Chaque section prend la hauteur de la vue */
+    min-width: 80vw;
+    height: 100vh;
     scroll-snap-align: start;
 }
 .site-header {
