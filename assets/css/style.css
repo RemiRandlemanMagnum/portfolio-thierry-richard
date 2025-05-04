@@ -19,7 +19,7 @@ body {
     transition: opacity 0.8s ease;
 }
 
-  /* Texte géant avec effet de tracé */
+  /* LOADER */
 .loader-text {
     font-family: var(--police-principale);
     font-size: clamp(4rem, 15vw, 20rem);
@@ -34,14 +34,13 @@ body {
     background-clip: text;
     animation: drawText 2s ease forwards;
 }
-  /* Animation du tracé */
+  /* ANIMATION */
 @keyframes drawText {
     to {
-      background-size: 100% 100%;
+    background-size: 100% 100%;
     }
 }
-
-  /* Quand on cache le loader */
+  /* LOADER MASK */
 #loader.hidden {
     opacity: 0;
     pointer-events: none;
@@ -51,6 +50,7 @@ img {
     height: auto; 
     display: block; 
 }
+  /* FONTS */
 @font-face {
     font-family: 'Outfit';
     src: url('../fonts/Outfit-Variable.woff2') format('woff2');
@@ -119,8 +119,8 @@ img {
 .hero-text h1 {
     font-family: var(--police-principale);
     font-weight: 800;
-    letter-spacing: 5%;
-    font-size: clamp(65px, 10vw, 120px);
+    letter-spacing: 0.4rem;
+    font-size: 4.5rem;
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
@@ -129,8 +129,8 @@ img {
 .hero-text p {
     font-family: var(--police-principale);
     font-weight: 200;
-    font-size: 22px;
-    letter-spacing: 50%;
+    font-size: 1.375rem;
+    letter-spacing: 0.7rem;
     font-style: italic;
     margin-top: 0;
     text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.762);
@@ -211,8 +211,8 @@ img {
     font-family: "zuume";
     font-weight: 800;
     font-size: 3.88rem;
-    line-height: 60px;
-    letter-spacing: 6%;
+    line-height: 3.75rem;
+    letter-spacing: 0.2rem;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -309,16 +309,16 @@ section{
 }
 section h2 {
     font-family: var(--police-principale);
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 800;
-    letter-spacing: 4%;
+    letter-spacing: 0.1rem;
 }
 section h3 {
     font-family: var(--police-principale);
     font-style: italic;
     font-weight: 300;
-    font-size: 22px;
-    letter-spacing: 50%;
+    font-size: 1.375rem;
+    letter-spacing: 0.8rem;
     margin-top: -10px;
 
 }
@@ -331,13 +331,13 @@ section p {
 section .btn-cta {
     font-family: var(--police-principale);
     font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 10%;
+    font-size: 1.3rem;
+    letter-spacing:0.1rem;
     color:var(--couleur-texte) ;
     padding: 13px 25px;
     text-decoration: none;
     border: 2px solid var(--couleur-texte);
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer; 
     transition:
     background-color 0.4s ease,
@@ -372,7 +372,7 @@ section .btn-cta:hover{
     height: 24px;
     margin-bottom: 0.3rem;
     object-fit: contain;
-  }
+}
 @keyframes float {
     0%   { transform: translateX(-50%) translateY(0); }
     50%  { transform: translateX(-50%) translateY(10px); }
@@ -415,8 +415,8 @@ section .btn-cta:hover{
 }
 .signature-geante {
     font-family: var(--police-principale);
-    font-size: clamp(4rem, 20vw, 12rem);
-    font-weight: 900;
+    font-size: 6rem;
+    font-weight: 800;
     text-transform: uppercase;
     line-height: 1;
     position: absolute;
@@ -437,16 +437,45 @@ section .btn-cta:hover{
     background-clip: text;
     transition: background-size 2s ease;
     margin-top: 150px;
-  }
-  @keyframes fillOutlineSolid {
+}
+    @keyframes fillOutlineSolid {
     to {
     background-size: 100% 100%;
     }
-  }
-  .signature-geante.loaded {
+}
+.signature-geante.loaded {
     background-size: 100% 100%;
     transition: background-size 2s ease;
-  }
+}
+#page-404 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    height: 100vh;
+    text-align: center;
+}
+#error h1{
+    font-family: var(--police-principale);
+    font-weight: 800;
+    letter-spacing: 5%;
+    font-size: 4.375rem;
+}
+#error p{
+    font-family: var(--police-textes);
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 /* === MAIN CONTAINER (vertical scroll mobile) === */
 .container {
 display: flex;
@@ -500,7 +529,7 @@ flex-direction: column;
     #contact{
     margin-top: 0px;
     }
-  }
+}
 /* === DESKTOP === */
 @media screen and (min-width: 1024px) {
 body {
@@ -764,9 +793,16 @@ section {
         max-width:32rem;
     }
     .signature-geante {
-        font-size: 15rem;
-        letter-spacing: 7%;
+        font-size: 16rem;
+        letter-spacing: 0.7rem;
         bottom: -7%;
+    }
+    #error h1{
+        font-family: var(--police-principale);
+        font-weight: 800;
+        letter-spacing: 5%;
+        line-height: 10.938rem;
+        font-size: 12.125rem;
     }
 }
 body.accessibility {
@@ -774,50 +810,45 @@ body.accessibility {
     color: #000000;
 }
   /* Textes */
-  body.accessibility h1,
-  body.accessibility h2,
-  body.accessibility p,
-  body.accessibility a {
+    body.accessibility h1,
+    body.accessibility h2,
+    body.accessibility p,
+    body.accessibility a {
     color: #000000 !important;
-  }
-  
+}
   /* Boutons */
-  body.accessibility .btn-cta {
+    body.accessibility .btn-cta {
     background-color: #000000 !important;
     color: #ffffff !important;
     border-color: #000000 !important;
-  }
-  
+    }
   /* Menu burger + overlay */
-  body.accessibility .menu-toggle,
-  body.accessibility .menu-overlay,
-  body.accessibility .lang-btn,
-  body.accessibility .access-btn {
+    body.accessibility .menu-toggle,
+    body.accessibility .menu-overlay,
+    body.accessibility .lang-btn,
+    body.accessibility .access-btn {
     background-color: #ffffff !important;
     color: #000000 !important;
     border-color: #000000 !important;
-  }
-  
+    }
   /* Navigation */
-  body.accessibility .nav-links a {
+    body.accessibility .nav-links a {
     color: #000000 !important;
-  }
-  
+}
   /* Signature géante */
-  body.accessibility .signature-geante {
+body.accessibility .signature-geante {
     -webkit-text-stroke: 1px #000000;
     background: linear-gradient(to right, #000000 100%, #000000 100%);
     background-size: 100% 100%;
     color: transparent;
-  }
-  
+}
   /* SVG */
-  body.accessibility svg path,
-  body.accessibility svg circle,
-  body.accessibility svg rect {
+body.accessibility svg path,
+body.accessibility svg circle,
+body.accessibility svg rect {
     fill: #000000 !important;
     stroke: #000000 !important;
-  }
-  body.accessibility .logo {
+}
+body.accessibility .logo {
     color: #000000;
-  }
+}

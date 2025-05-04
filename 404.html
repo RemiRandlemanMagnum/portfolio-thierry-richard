@@ -2,6 +2,83 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page non trouvée – 404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
+    <meta http-equiv="X-Content-type-options" content="nosniff">
+    <meta http-equiv="Referrer-policy" content="no-referrer-when-downgrade">
+    <!-- HTML Meta Tags -->
+    <title>Page non trouvée</title>
+    <meta name="title" content="Thierry Richard | Photographe Brestois">
+    <meta name="description" content="Portfolio dédié aux réalisations de Thierry Richard. Photographe Brestois depuis ...">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/svg/favicon.svg" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+<body id="page-404">
+    <div id="loader">
+        <div class="loader-text">THIERRY RICHARD</div>
+    </div>
+    <header class="site-header" role="banner">
+    <div class="logo-container">
+        <a href="#accueil" aria-label="Retour à l’accueil">
+            <img src="assets/img/svg/logo.svg" alt="Logo Thierry Richard">
+            <span>Thierry Richard</span>
+        </a>
+    </div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <img src="assets/img/svg/menu.svg" alt="" aria-hidden="true"/>
+    </button>
+    
+    <nav id="menu" class="menu-overlay" aria-hidden="true">
+        <div class="logo-container">
+            <a href="#accueil" aria-label="Retour à l’accueil" id="site-logo">
+            <img src="assets/img/svg/logo.svg" alt="Logo Thierry Richard">
+            <span>Thierry Richard</span>
+            </a>
+        </div>
+        <div class="menu-image">
+            <img src="assets/img/webp/menu.webp" alt="Un homme qui saute d'un promontoir" loading="lazy" />
+        </div>
+        <div class="menu-content">
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#travaux">Travaux</a></li>
+                <li><a href="#avenir">À venir</a></li>
+                <li><a href="#prestations">Prestations</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-extras">
+                <div class="lang-switch">
+                <button class="lang-btn active" aria-label="Langue française">FR</button>
+                <button class="lang-btn" aria-label="Langue anglaise">EN</button>
+                </div>
+                <button id="theme-toggle" class="access-btn" aria-label="Activer le mode contraste élevé">Contraste</button>
+            </div>
+        </div>
+        <button class="menu-close" aria-label="Fermer le menu">
+            <img src="assets/img/svg/cross.svg" alt="" aria-hidden="true" />
+        </button>
+        <div class="menu-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/img/svg/instagram.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="assets/img/svg/facebook.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </nav>
+    </header>
+    <main class="container container-error">
+        <section id="error" aria-labelledby="Erreur de page">
+        <h1>404</h1>
+        <p>Désolé, la page que vous cherchez n'existe pas.</p>
+        <a href="./index.html" class="btn-cta">Retour à l’accueil</a>
+        <div class="signature-geante" aria-hidden="true">THIERRY RICHARD</div>
+        </section>
+    </main>
+    <script src="./assets/js/menu.js"></script>
+</body>
+</html>
