@@ -809,7 +809,7 @@ section {
         position: absolute;
         width: 50vw;
         height: 20vh;
-        background-image: url(img/webp/avenir-1200.webp);
+        background-image: url(../img/webp/avenir-1200.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
